@@ -1,0 +1,111 @@
+/*  Modern Square Tabs
+    last updated 2015-05-21 for Firefox 38
+    works with Pinned Tabs.
+*/
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+:root {
+    --tab-min-height: 31px;
+}
+
+#TabsToolbar {
+    background: transparent !important;
+    margin-bottom: 0 !important;
+}
+
+#TabsToolbar .arrowscrollbox-scrollbox {
+    padding: 0 !important;
+}
+
+#TabsToolbar .tabbrowser-tabs {
+    min-height: 31px !important; /* Minimal tab height */
+    margin-top: -1px !important;
+    margin-left: -1px !important;
+}
+
+#TabsToolbar .tabbrowser-tab {
+    
+    -moz-border-top-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-bottom-colors: none !important;
+    
+    border-color: rgba(0,0,0,.25) !important;
+    border-width: 1px 1px 0px 1px !important;
+    
+    text-shadow: 0 0 4px rgba(255,255,255,.75) !important;
+    background: rgba(255,255,255,.3) !important;
+    background-clip: padding-box !important;
+    transition: all .35s !important;
+    
+    margin-bottom: 1px !important;
+    margin-right: 1px !important;
+    min-height: var(--tab-min-height);
+}
+
+
+#TabsToolbar .tabbrowser-tab[afterselected] {
+   border-left-color: rgba(0,0,0,.3) !important;
+}
+
+#TabsToolbar .tabbrowser-tab[selected] {
+    background: linear-gradient(hsla(210,85%,10%,.3), hsla(0,0%,100%,.55)) !important;
+    background-clip: padding-box !important;
+    border-color: rgba(0,0,0,.25) !important;
+}
+
+#TabsToolbar .tabs-newtab-button:hover,
+#TabsToolbar .tabbrowser-tab:hover:not([selected]) {
+    border-color: rgba(0,0,0,.25) !important;
+    background-image: none !important;
+    background-color: rgba(255,255,255,.55) !important;
+}
+
+#TabsToolbar .tab-background {
+    margin: 0 !important;
+    background: transparent !important;
+}
+
+#TabsToolbar .tab-background-start,
+#TabsToolbar .tab-background-end {
+    display: none !important;
+}
+
+#TabsToolbar .tab-background-middle {
+    margin: -4px -2px !important;
+    background: transparent !important;
+}
+
+#TabsToolbar .tabbrowser-tab:after,
+#TabsToolbar .tabbrowser-tab:before {
+    display: none !important;
+}
+
+#TabsToolbar .tabs-newtab-button {
+    border-width: 1px 1px 0 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    padding: 0 5px !important;
+}
+
+/* Pinned tabs */
+#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] .tab-content {
+    bottom: 0;
+    min-height: var(--tab-min-height);
+}
+
+/* Tab overflow */
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:not([collapsed]),
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:not([collapsed]) {
+    background-image: radial-gradient(1em 2em at 0 50%, rgba(0,0,0,.3), rgba(0,0,0,0)) !important;
+}
+
+
+#addon-bar, #PersonalToolbar, #nav-bar {
+    background: rgba(255,255,255,.55) !important;
+    background-clip: padding-box !important;
+    border-color: rgba(0,0,0,.25) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+

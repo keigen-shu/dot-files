@@ -1,0 +1,41 @@
+Vim*useScemes: all
+Vim*sgiMode: true
+Vim*useEnhancedFSB: true
+
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.url-select.launcher: firefox
+URxvt.url-select.underline: true
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
+URxvt.font: xft:Inconsolata for Powerline:pixelsize=12
+
+! Terminal colors
+*background: #1E202E
+*foreground: #DEE2FE
+
+!black
+*color0: #04121E
+*color8: #000000
+!red
+*color1: #E8008A
+*color9: #E80000
+!green
+*color2: #A2E200
+*color10:#00E800
+!yellow->orange
+*color3: #EA5430
+*color11:#EA4200
+!blue
+*color4: #007AA6
+*color12:#1A90F2
+!magenta
+*color5: #9966CC
+*color13:#8E00F2
+!cyan->gray
+*color6: #90A2AE
+*color14:#536878
+!white
+*color7: #F0EAE0
+*color15:#F8F8F2
