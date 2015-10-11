@@ -53,7 +53,7 @@ case $TERM in
     *xterm*|*rxvt*|(dt|k|E|a)term)
     preexec () {
         #print -Pn "\e]2;[%l] [%n@%m] <$1>\a"                # original code (see above)
-        print -Pn "\e]2;%l [${COLUMNS}x${LINES}] :: $1\a"    # edited; %n@%m omitted, as I know who and where I am
+        print -Pn "\e]2;$1 :: %l [${COLUMNS}x${LINES}]\a"    # edited; %n@%m omitted, as I know who and where I am
     }
     ;;
     screen*)
