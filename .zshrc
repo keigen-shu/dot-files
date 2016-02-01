@@ -75,8 +75,6 @@ alias pacman='sudo pacman --color=auto'
 alias wine32env='WINEARCH=win32 WINEPREFIX=~/.wine32'
 alias wine32='wine32env wine'
 
-alias ncmpcpp='/usr/local/bin/ncmpcpp'
-
 alias scrb0='su -c "echo 0 > /sys/class/backlight/acpi_video0/brightness"'
 alias scrb1='su -c "echo 1 > /sys/class/backlight/acpi_video0/brightness"'
 alias scrb2='su -c "echo 2 > /sys/class/backlight/acpi_video0/brightness"'
