@@ -1,9 +1,14 @@
 " --- {{{ NeoBundle 
-if has('vim_starting')
-	set runtimepath+=/home/moogtrain/.nvim/bundle/neobundle.vim/
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
+
+if &compatible
+	set nocompatible
 endif
 
-call neobundle#begin(expand('/home/moogtrain/.nvim/bundle'))
+set runtimepath^=~/.config/nvim/bundle/neobundle.vim/
+
+call neobundle#begin(expand('~/.config/nvim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
