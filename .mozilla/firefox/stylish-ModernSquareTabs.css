@@ -88,6 +88,14 @@
     padding: 0 5px !important;
 }
 
+/* Fix borders for tabs before and after currently selected tab */
+.tabbrowser-tab[beforeselected] {
+    border: 1px solid rgba(0,0,0,.25) !important;
+}
+.tabbrowser-tab[afterselected] {
+    border: 1px solid rgba(0,0,0,.25) !important;
+}
+
 /* Pinned tabs */
 #tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] .tab-content {
     bottom: 0;
